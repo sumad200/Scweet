@@ -97,7 +97,7 @@ def log_user_page(user, driver, headless=True):
 
 def get_users_followers(users, env, verbose=1, headless=True, wait=2, limit=float('inf'), file_path=None):
     followers = utils.get_users_follow(users, headless, env, "followers", verbose, wait=wait, limit=limit)
-
+    print(followers)
     if file_path == None:
         file_path = 'outputs/' + str(users[0]) + '_' + str(users[-1]) + '_' + 'followers.json'
     else:
@@ -110,7 +110,7 @@ def get_users_followers(users, env, verbose=1, headless=True, wait=2, limit=floa
 
 def get_users_following(users, env, verbose=1, headless=True, wait=2, limit=float('inf'), file_path=None):
     following = utils.get_users_follow(users, headless, env, "following", verbose, wait=wait, limit=limit)
-
+    print(following)
     if file_path == None:
         file_path = 'outputs/' + str(users[0]) + '_' + str(users[-1]) + '_' + 'following.json'
     else:
